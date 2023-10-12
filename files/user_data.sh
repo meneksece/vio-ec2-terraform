@@ -16,8 +16,8 @@ yum install npm -y
 
 npm install pm2 -g
 
-
-git clone https://github.com/simple-coding-2020/terraform-digitalocean-app app
-cd app
-npm install
-pm2 start index.js
+#modify below for ec2 app
+# git clone https://github.com/simple-coding-2020/terraform-digitalocean-app app
+# cd app
+# npm install
+# pm2 start index.js
