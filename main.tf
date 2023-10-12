@@ -21,5 +21,5 @@ resource "aws_instance" "ec2" {
   tags = {
     Name = "ec2-ect-instance"
   }
-
+  user_data = file("${path.module}/files/user_data.sh")  # Path to your user data script file
 }
