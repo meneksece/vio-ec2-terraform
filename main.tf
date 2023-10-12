@@ -17,7 +17,7 @@ resource "aws_instance" "ec2" {
   instance_type          = "t2.micro"
   availability_zone      = "eu-central-1a"
   key_name               = "ect-key"
-  vpc_security_group_ids = ["sg-08be11322872e4328"]
+  vpc_security_group_ids = ["sg-08be11322872e4328", "sg-0da013698941ff354"]
   tags = {
     Name = "ec2-ect-instance"
   }
