@@ -21,5 +21,12 @@ resource "aws_instance" "ec2" {
   tags = {
     Name = "ec2-ect-instance"
   }
-  user_data = file("${path.module}/files/user_data.sh")  # Path to your user data script file
+  # user_data = file("${path.module}/files/user_data.sh") # Path to your user data script file
+}
+
+output "PublicIP" {
+  value = aws_instance.ec2.public_ip
+}
+output "PrivIP" {
+  value = aws_instance.ec2.private_ip
 }

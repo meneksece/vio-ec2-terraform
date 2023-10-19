@@ -10,14 +10,11 @@ echo "Now after sleeping , Starting user-data script..."
 yum update -y
 yum install epel-release -y
 
-yum install git -y
-yum install nodejs -y
-yum install npm -y
+yum install wget unzip httpd -y
+systemctl enable httpd
+systemctl start httpd
 
-npm install pm2 -g
-
-#modify below for ec2 app
-# git clone https://github.com/simple-coding-2020/terraform-digitalocean-app app
-# cd app
-# npm install
-# pm2 start index.js
+wget https://www.tooplate.com/zip-templates/2117_infinite_loop.zip
+unzip -o 2117_infinite_loop.zip
+cp -r 2117_infinite_loop/* /var/www/html
+systemctl restart httpd
